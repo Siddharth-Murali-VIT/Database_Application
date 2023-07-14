@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Database Application</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      text-align: center;
+
+    }
+
+    
+
+    form {
+
+      margin-top: 50px;
+
+    }
+
+    
+
+    input[type="text"], input[type="password"], input[type="number"] {
+
+      padding: 10px;
+
+      font-size: 16px;
+
+    }
+
+    
+
+    input[type="submit"] {
+
+      padding: 10px 20px;
+
+      font-size: 16px;
+
+      background-color: #4CAF50;
+
+      color: #fff;
+
+      border: none;
+
+      cursor: pointer;
+
+    }
+
+    
+
+    input[type="submit"]:hover {
+
+      background-color: #45a049;
+
+    }
+
+    
+
+    table {
+
+      margin: 0 auto;
+
+      border-collapse: collapse;
+
+    }
+
+    
+
+    table td, table th {
+
+      padding: 8px;
+
+      border: 1px solid #ddd;
+
+    }
+
+    
+
+    table th {
+
+      background-color: #f2f2f2;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h2>Database Application</h2>
+
+  
+
+  <!-- Search Form -->
+
+  <form action="search.php" method="POST">
+
+    <input type="text" name="search" placeholder="Enter search keyword">
+
+    <input type="submit" value="Search">
+
+  </form>
+
+  
+
+  <!-- View All Records -->
+
+  <form action="view.php" method="POST">
+
+    <input type="hidden" name="view" value="all">
+
+    <input type="submit" value="View All Records">
+
+  </form>
+
+  
+
+  <!-- First Record -->
+
+  <form action="view.php" method="POST">
+
+    <input type="hidden" name="view" value="first">
+
+    <input type="submit" value="View First Record">
+
+  </form>
+
+  
+
+  <!-- Last Record -->
+
+  <form action="view.php" method="POST">
+
+    <input type="hidden" name="view" value="last">
+
+    <input type="submit" value="View Last Record">
+
+  </form>
+
+  
+
+  <!-- Class Average -->
+
+  <form action="class_average.php" method="POST">
+
+    <input type="submit" value="Class Average">
+
+  </form>
+
+  
+
+  <!-- DML Operations Form -->
+
+  <h3>DML Operations</h3>
+
+  <form action="dml.php" method="POST">
+
+    <label for="username">Username:</label><br>
+
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label><br>
+
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="marks">Marks:</label><br>
+
+    <input type="number" id="marks" name="marks" required><br><br>
+
+    <label for="operation">Operation:</label><br>
+
+    <select id="operation" name="operation" required>
+
+      <option value="">Select Operation</option>
+
+      <option value="insert">Insert</option>
+
+      <option value="update">Update</option>
+
+      <option value="delete">Delete</option>
+
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+
+  </form>
+
+</body>
+
+</html>
+
